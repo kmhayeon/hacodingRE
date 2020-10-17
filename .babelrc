@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "emotion",
+      {
+        "autoLabel": true,
+        "labelFormat": "[dirname]-[filename]-[local]"
+      }
+    ]
+  ],
+    "presets": ["next/babel"]
+}
