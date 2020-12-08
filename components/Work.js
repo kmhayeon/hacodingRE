@@ -1,9 +1,11 @@
 import React from 'react';
-import { Card, Image, Layout } from 'antd';
-const { Content } = Layout;
-import { Row, Col } from 'antd';
+import {Card, Image, Layout} from 'antd';
+import Link from 'next/link';
+
+const {Content} = Layout;
+import {Row, Col} from 'antd';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import {jsx, css} from '@emotion/core';
 
 const content = css`
     padding: 9rem 1.5rem;
@@ -57,12 +59,20 @@ const workContent = css`
             }
         }
     }
-
     .txt {
+        color: #ffffff;
         background: #00000;
         opacity: 0;
     }
+    h1{
+        padding-top: 60px;
+        color: #ffffff;
+    }
+    span{
+        color: #ffffff;
+    }
 `;
+
 
 const Work = () => {
     return (
@@ -86,96 +96,68 @@ const Work = () => {
                     <Row>
                         <Col flex={12}>
                             <div className="img">
+                                <Link
+                                    href="//drive.google.com/file/d/13h5nxIywueOUpQZskQ_WzxRbxOC9MlY4/view?usp=sharing">
+                                    <a className="foo" target="_blank" rel="noopener noreferrer">
+                                        <div className="txt">
+                                            <div className="data">
+                                                <h1>D.aid</h1>
+                                                <span>기획 및 구축<br/>
+                                                    HTML / CSS / VUE</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                            </div>
+                        </Col>
+                        <Col flex={12}>
+                            <div className="img">
                                 <div className="txt">
-                                    <p>안녕하세요</p>
+                                    <h1>Company Homepage</h1>
+                                    <span>유지 / 보수<br/>
+                                        HTML / CSS / javascript</span>
                                 </div>
                             </div>
                         </Col>
                         <Col flex={12}>
                             <div className="img">
                                 <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
+                                    <h1>YellowBus admin 1.0</h1>
+                                    <span>유지 / 보수<br/>
+                                        HTML / CSS / javascript / Jquery</span>
                                 </div>
                             </div>
                         </Col>
                     </Row>
-                    <Row style={{ paddingTop: '50px' }}>
+                    <Row style={{paddingTop: '50px'}}>
                         <Col flex={12}>
                             <div className="img">
                                 <div className="txt">
-                                    <p>안녕하세요</p>
+                                    <h1>YellowBus admin 2.0</h1>
+                                    <span>구축 및 유지/보수<br/>
+                                        HTML / SCSS / React / Mobx</span>
                                 </div>
                             </div>
                         </Col>
                         <Col flex={12}>
                             <div className="img">
                                 <div className="txt">
-                                    <p>안녕하세요</p>
+                                    <h1>Payment admin</h1>
+                                    <span>구축 및 유지/보수<br/>
+                                        HTML / SCSS / React / Redux</span>
                                 </div>
                             </div>
                         </Col>
-                        <Col flex={12}>
+                        {/*<Col flex={12}>
                             <div className="img">
                                 <div className="txt">
-                                    <p>안녕하세요</p>
+                                    <h1>D.aid</h1>
+                                    <span>기획 및 프론트 개발<br/>
+                                        HTML / CSS / VUE</span>
                                 </div>
                             </div>
-                        </Col>
+                        </Col>*/}
                     </Row>
-
-                    {/*<Row gutter={16}>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row gutter={16} style={{ paddingTop: '50px' }}>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col span={8}>
-                            <div className="img">
-                                <div className="txt">
-                                    <p>안녕하세요</p>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>*/}
                 </div>
             </Content>
         </>

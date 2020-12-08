@@ -107,11 +107,12 @@ const Detail = () => {
                                 그리고 사려 깊은 상호작용을 중시합니다.
                             </p>
                             <p2>Things I enjoy planning:</p2>
-                            <p> UX, UI</p>
+                            <p> UI / UX</p>
                             <p2>Plan&Design Tools:</p2>
                             <ul>
                                 <li>Sketch</li>
                                 <li>Zeplin</li>
+                                <li>figma</li>
                                 <li>Illustratior</li>
                                 <li>Photoshop</li>
                                 <li>Premiere</li>
@@ -132,15 +133,17 @@ const Detail = () => {
                                 브라우저에서 아이디어를 실현하는 것을 즐깁니다.
                             </p>
                             <p2>Languages I speak:</p2>
-                            <p>HTML, CSS, Sass, JavaScript</p>
+                            <p>HTML / CSS / Sass / JavaScript</p>
                             <p2>Dev Tools:</p2>
                             <ul>
                                 <li>React</li>
                                 <li>Redux</li>
+                                <li>Mobx</li>
                                 <li>Vue</li>
                                 <li>Github</li>
-                                <li>Bootstrap</li>
                                 <li>SourceTree</li>
+                                <li>Jira</li>
+                                <li>Bootstrap</li>
                                 <li>Terminal</li>
                             </ul>
                         </Card>

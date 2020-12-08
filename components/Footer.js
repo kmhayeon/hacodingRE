@@ -14,7 +14,7 @@ const conDiv = css`
     }
 
     .cardDiv {
-        background-color: rgb(51 43 46);
+        background-color: #8142e6;
         border: 0px;
         border-radius: 20px;
         padding: 3.5rem 1.25rem;

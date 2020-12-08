@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout;
 
 const header = css`
     background-color: #fff;
-    padding: 3rem 3rem !important;
+    padding: 2rem 3rem !important;
 `;
 
 const emailBtn = css`
@@ -81,14 +81,14 @@ const AppLayout = ({ children }) => {
             <Footer css={FooterDiv}>
                 <Image
                     className="imgDiv"
-                    width={80}
-                    src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                    width={50}
+                    src="../img/logo_w.png"
                 />
 
                 <h1>
                     learning, & leveling up <br /> one day at a time.
                 </h1>
-                <p>Copyrightⓒ 2020 All rights reserved by HAYEON</p>
+                <p>Copyrightⓒ 2021 All rights reserved by HAYEON</p>
             </Footer>
         </Layout>
     );
