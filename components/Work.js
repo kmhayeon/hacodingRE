@@ -36,7 +36,7 @@ const content = css`
 const workContent = css`
     margin: 0 auto;
     max-width: 1200px;
-    padding: 5rem 0.5rem;
+    padding: 5rem 0rem;
     
     .ant-card{
         max-width: 350px;
