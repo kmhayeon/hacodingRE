@@ -122,7 +122,7 @@ const App = ({
 }) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, __jsx("meta", {
     charSet: "utf-8"
-  }), __jsx("title", null, "Hacoding")), __jsx(Component, null));
+  }), __jsx("title", null, "HAYEON")), __jsx(Component, null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);

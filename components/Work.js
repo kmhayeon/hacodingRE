@@ -1,14 +1,15 @@
 import React from 'react';
-import {Card, Image, Layout} from 'antd';
-import Link from 'next/link';
+import {Image, Layout} from 'antd';
+import {Card} from 'antd';
 
-const {Content} = Layout;
-import {Row, Col} from 'antd';
 /** @jsx jsx */
+import {Row, Col} from 'antd';
 import {jsx, css} from '@emotion/core';
 
+const {Content} = Layout;
+
 const content = css`
-    padding: 9rem 1.5rem;
+    padding: 8rem 5rem 15rem;
     border-bottom: 1px solid #e6ecf8;
 
     h1 {
@@ -35,128 +36,102 @@ const content = css`
 const workContent = css`
     margin: 0 auto;
     max-width: 1200px;
-    padding: 8rem 0.4rem;
-
-    .img {
-        width: 90%;
-        height: 250px;
-        background: url('/img/con1.png') no-repeat;
-        border-radius: 20px;
-
-        &:hover {
-            .txt {
-                color: #ffffff;
-                opacity: 0.9;
-                cursor: pointer;
-                background-color: #ff7e57;
-                transition: all 0.3s;
-                position: absolute;
-                border-radius: 20px;
-                width: 100%;
-                height: 250px;
-                margin: auto;
-                position: relative;
-            }
-        }
+    padding: 5rem 0.5rem;
+    
+    .ant-card{
+        max-width: 350px;
+        min-height: 250px;
+        border-radius: 25px;
     }
-    .txt {
-        color: #ffffff;
-        background: #00000;
-        opacity: 0;
+   
+    img {
+        border-radius: 25px 25px 0px 0px;
+    } 
+   
+    h3{
+        color: #000;
     }
-    h1{
-        padding-top: 60px;
-        color: #ffffff;
-    }
+    
     span{
-        color: #ffffff;
+         #484848;
+        font-weight: 200;
     }
 `;
 
 
+const onClickImg = (url) => {
+    window.open(url, '_blank')
+}
+
+
 const Work = () => {
+    const items = [
+        {
+            title: 'D.aid 서비스',
+            subtitle: '기획 및 소개서 / 매뉴얼 제작',
+            cont: 'HTML / CSS / Javascript / Vue',
+            image: "../img/work/01.png",
+            url: 'https://drive.google.com/file/d/12H8ONTRvwKPPzq8CTwDWfOpyUZTOaA0z/view?usp=sharing'
+        },
+        {
+            title: '옐로우버스 서비스',
+            subtitle: '프론트엔드 개발',
+            cont: 'HTML / Sass / React / Bootstrap',
+            image: "../img/work/02.png",
+            url: 'https://drive.google.com/file/d/1OArp7tiz1N_x1d8YdTPf40sJFiCB9dWq/view?usp=sharing'
+        },
+        {
+            title: '다독다독 앱 서비스',
+            subtitle: '퍼소나 분석 및 기획서 제작',
+            cont: '개인 프로젝트',
+            image: '../img/work/03.png',
+            url: 'https://drive.google.com/file/d/1LIYl_tUPhT0gVSyPDUJAlwpQMNuIrPmK/view?usp=sharing'
+        },
+        {
+            title: '네이버페이 기능 개선안',
+            subtitle: '개선안 기획서 제작',
+            cont: '개인 프로젝트',
+            image: '../img/work/04.png',
+            url: 'https://drive.google.com/file/d/1utqaEpNKZ8wzXaJ9WbnAaEEuhEWGcdH3/view?usp=sharing'
+        },
+        {
+            title: '상담톡 플로우 정리',
+            subtitle: '챗봇 플로우 정리',
+            cont: '인턴 프로젝트',
+            image: "../img/work/05.png",
+            url: 'https://drive.google.com/file/d/1KussC4EDzLW38yYF2eXmEwDBlh3DKyhT/view?usp=sharing'
+        },
+    ];
+
+
     return (
         <>
             <Content css={content}>
                 <div>
                     <h1>My Recent Work</h1>
-                    {/*<h1>최근 프로젝트</h1>*/}
                     <p>
-                        작업한 몇 가지 프로젝트들이 있습니다. 더 궁금하신 점이
-                        있나요?
-                        <a
-                            href="mailto:kmhayeon12@gmail.com"
-                            title="문의 메일 보내기"
-                        >
-                            &nbsp;Email me.
-                        </a>
+                        작업한 몇 가지 프로젝트들이 있습니다. 더 궁금하신 점이 있나요?
+                        <a href="mailto:kmhayeon12@gmail.com"> &nbsp;Email me.</a>
                     </p>
                 </div>
-                <div className="site-card-wrapper" css={workContent}>
+                <div>
                     <Row>
-                        <Col flex={12}>
-                            <div className="img">
-                                <Link
-                                    href="//drive.google.com/file/d/13h5nxIywueOUpQZskQ_WzxRbxOC9MlY4/view?usp=sharing">
-                                    <a className="foo" target="_blank" rel="noopener noreferrer">
-                                        <div className="txt">
-                                            <div className="data">
-                                                <h1>D.aid</h1>
-                                                <span>기획 및 구축<br/>
-                                                    HTML / CSS / VUE</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </Link>
-                            </div>
-                        </Col>
-                        <Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <h1>Company Homepage</h1>
-                                    <span>유지 / 보수<br/>
-                                        HTML / CSS / javascript</span>
+                        {items.map((item, idx) => {
+                            return (
+                                <div className="site-card-wrapper" css={workContent} key={idx}>
+                                    <Col flex={3}>
+                                        <Card hoverable
+                                              style={{width: 240}}
+                                              cover={<img src={item.image}/>}
+                                              onClick={(e) => onClickImg(item.url)}>
+                                            <h3> {item.title}</h3>
+                                            <span>{item.subtitle}<br/>
+                                                {item.cont}</span>
+                                        </Card>
+                                    </Col>
                                 </div>
-                            </div>
-                        </Col>
-                        <Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <h1>YellowBus admin 1.0</h1>
-                                    <span>유지 / 보수<br/>
-                                        HTML / CSS / javascript / Jquery</span>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row style={{paddingTop: '50px'}}>
-                        <Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <h1>YellowBus admin 2.0</h1>
-                                    <span>구축 및 유지/보수<br/>
-                                        HTML / SCSS / React / Mobx</span>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <h1>Payment admin</h1>
-                                    <span>구축 및 유지/보수<br/>
-                                        HTML / SCSS / React / Redux</span>
-                                </div>
-                            </div>
-                        </Col>
-                        {/*<Col flex={12}>
-                            <div className="img">
-                                <div className="txt">
-                                    <h1>D.aid</h1>
-                                    <span>기획 및 프론트 개발<br/>
-                                        HTML / CSS / VUE</span>
-                                </div>
-                            </div>
-                        </Col>*/}
+                            )
+                        })}
                     </Row>
                 </div>
             </Content>

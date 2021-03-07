@@ -81,17 +81,22 @@ const img = css`
     margin: 0 auto 2em;
 `;
 
+const proImg = css`
+    top: 8px;
+    position: relative;
+`
+
 const Detail = () => {
     return (
         <>
-            <Image src="/img/hero.svg" />
+            <Image  preview={false} css={proImg} src="/img/hero.svg"  />
             <div css={DetailDiv}>
-                <h1>Hi, I’m Hayeon. Nice to meet you.</h1>
+                <h1>Nice to meet you.</h1>
                 <h4>
                     기획을 시작으로 프론트 개발까지 스타트업 등에서 <br />
                     여러사람들과 협력하여 비즈니스 및 소비자 모두를 위한
                     서비스를 개발하였습니다. <br /> 여러가지에 호기심이 많으며
-                    개발을 하며 다양한 관점에서의 문제를 개선하기위해 끊임없이
+                    다양한 관점에서의 문제를 개선하기위해 끊임없이
                     노력하고 있습니다.
                 </h4>
             </div>
@@ -99,7 +104,7 @@ const Detail = () => {
                 <Row css={row}>
                     <Col span={12} css={col}>
                         <Card bordered={false} css={card}>
-                            <Image css={img} width={60} src="/img/sketch.svg" />
+                            <Image css={img} width={60} preview={false} src="/img/sketch.svg" />
                             <h1>Planner & Designer</h1>
                             <p>
                                 단순한 콘텐츠 구조와 깨끗한 디자인 패턴,
@@ -124,6 +129,7 @@ const Detail = () => {
                             <Image
                                 css={img}
                                 width={60}
+                                preview={false}
                                 src="/img/web-programming.svg"
                             />
                             <h1>Front-end Developer</h1>

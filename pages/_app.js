@@ -8,7 +8,7 @@ const App = ({ Component }) => {
         <>
             <Head>
                 <meta charSet="utf-8" />
-                <title>Hacoding</title>
+                <title>HAYEON</title>
             </Head>
             <Component />
         </>

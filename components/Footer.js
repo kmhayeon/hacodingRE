@@ -14,44 +14,50 @@ const conDiv = css`
     }
 
     .cardDiv {
-        background-color: #8142e6;
-        border: 0px;
+        background-color: #fef4f0;
+        border: 2px solid #ff7e57;
         border-radius: 20px;
         padding: 3.5rem 1.25rem;
 
         p1 {
-            color: #fff;
+            color: #ff7e57;
             font-size: 28px;
             font-weight: 400;
         }
 
         p2 {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 200;
+            color: #ff7e57;
+            font-size: 16px;
+            font-weight: 400;
             padding-top: 10px;
         }
     }
 `;
 
 const emailBtn = css`
-    font-weight: 300;
+    font-weight: 500;
+    color: #ff7e57;
     font-size: 17px;
     background-color: transparent;
     border: 2px solid #ff7e57;
-    color: #fff;
     border-radius: 40px;
     padding: 10px 40px 37px 40px;
     &:hover {
         background-color: #ff7e57;
         color: #fff;
-        border-color: #ff7e57;
+        border-color: #fff;
     }
     &:focus {
         border: 2px solid #ff7e57;
         color: #ff7e57;
         border-radius: 40px;
+        background-color: #fef4f0;
     }
+    
+    @media only screen and (max-width: 830px) {
+        display:none;
+    }
+    
 `;
 
 const Footer = () => {
@@ -72,10 +78,7 @@ const Footer = () => {
                                 </p2>
                             </Col>
                             <Col flex="auto">
-                                <a
-                                    href="mailto:kmhayeon12@gmail.com"
-                                    title="문의 메일 보내기"
-                                >
+                                <a href="mailto:kmhayeon12@gmail.com">
                                     <Button css={emailBtn}>
                                         Let's do this
                                     </Button>

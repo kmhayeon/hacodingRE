@@ -9,12 +9,15 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.6.6",
+    "css-loader": "^5.1.1",
     "init": "^0.1.2",
     "next": "^9.5.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "style-loader": "^0.23.1",
+    "url-loader": "^4.1.1"
   },
   "scripts": {
     "lint": "eslint .",

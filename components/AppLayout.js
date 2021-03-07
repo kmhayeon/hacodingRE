@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { jsx, css } from '@emotion/core';
 import { Button, Layout, Menu, Card, Col, Image, Row } from 'antd';
 const { Header, Content, Footer } = Layout;
+import { GithubOutlined } from '@ant-design/icons';
+
 
 const header = css`
     background-color: #fff;
@@ -27,8 +29,9 @@ const emailBtn = css`
     }
     &:focus {
         border: 2px solid #ff7e57;
-        color: #fff;
+        color: #ff7e57;
         border-radius: 40px;
+        background-color: #fff;
     }
 `;
 
@@ -42,6 +45,14 @@ const ContentMain = css`
 
 const bodyFont = css`
     font-family: 'Poppins', 'Open Sans', sans-serif;
+`;
+
+const gitDiv = css`
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1rem;
+    padding-bottom: 10px;
 `;
 
 const FooterDiv = css`
@@ -66,12 +77,21 @@ const FooterDiv = css`
     }
 `;
 
+
+
+const onClickGit = () => {
+    const gitUrl = 'https://github.com/kmhayeon?tab=repositories'
+    window.open(gitUrl, '_blank')
+}
+
+
+
 const AppLayout = ({ children }) => {
     return (
         <Layout css={bodyFont}>
             <div css={header}>
                 <img width={60} src="../img/logo.png" />
-                <a href="mailto:kmhayeon12@gmail.com" title="문의 메일 보내기">
+                <a href="mailto:kmhayeon12@gmail.com">
                     <Button css={emailBtn}>Say Hello</Button>
                 </a>
             </div>
@@ -80,14 +100,18 @@ const AppLayout = ({ children }) => {
             </Content>
             <Footer css={FooterDiv}>
                 <Image
+                    preview={false}
                     className="imgDiv"
                     width={50}
                     src="../img/logo_w.png"
                 />
 
                 <h1>
-                    learning, & leveling up <br /> one day at a time.
+                    Thank You.
                 </h1>
+                <div css={gitDiv} onClick={(e) => onClickGit()}>
+                    <GithubOutlined color="#fff" />&nbsp;Github
+                </div>
                 <p>Copyrightⓒ 2021 All rights reserved by HAYEON</p>
             </Footer>
         </Layout>

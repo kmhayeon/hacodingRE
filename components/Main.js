@@ -5,7 +5,8 @@ import { jsx, css } from '@emotion/core';
 const { Content } = Layout;
 
 const mainText = css`
-    padding: 3rem 1.5rem 5rem 1.5rem;
+    padding: 2rem 1.5rem 5rem 1.5rem;
+
 
     h1 {
         font-size: 45px;
@@ -24,12 +25,11 @@ const Main = () => {
         <>
             <Content>
                 <div css={mainText}>
-                    <h1>UI UX Planner, Front-end Developer</h1>
+                    <h1>Hi, I’m Hayeon.</h1>
                     <h4>
-                        사용자를 위한 서비스를 기획하고 코딩하며 제가하는 일을
-                        좋아합니다.
+                        안녕하세요. 자유로운 사고와 풍부한 호기심을 가진 김하연입니다.
                     </h4>
-                    <Image width={240} src="/img/1-2.png" />
+                    <Image width={240} preview={false} src="/img/1-2.png" />
                 </div>
             </Content>
         </>
