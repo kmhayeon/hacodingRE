@@ -9,7 +9,7 @@ import {jsx, css} from '@emotion/core';
 const {Content} = Layout;
 
 const content = css`
-    padding: 8rem 5rem 15rem;
+    padding: 10rem 5rem 18rem;
     border-bottom: 1px solid #e6ecf8;
 
     h1 {
